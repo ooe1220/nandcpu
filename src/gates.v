@@ -9,9 +9,21 @@ module nand_gate (
     output y
 );
 
-    nand(y,a,b);
-endmodule
+    //nand(y,a,b); // 本篇    <----- コメントアウト
+    
+    // MOSFET版 番外篇    <----- 追加
+    supply1 VDD; // 電源
+    supply0 GND; // 接地
 
+    // PMOS: a または b が 低電圧 なら y を 高電圧 に引き上げ
+    pmos p1 (y, VDD, a);
+    pmos p2 (y, VDD, b);
+
+    // NMOS: a と b が両方 高電圧 なら y を 低電圧 に引き下げ
+    nmos n1 (y, net1, a);
+    nmos n2 (net1, GND, b);
+    
+endmodule
 
 // ========================================
 // NOT素子
