@@ -14,6 +14,7 @@
 
 ## OR
 
-<img width="314" height="133" alt="or drawio (1)" src="https://github.com/user-attachments/assets/1440f306-e80f-482f-96d7-921e5cfb6b36" />
+<img width="303" height="138" alt="or drawio (2)" src="https://github.com/user-attachments/assets/39f4faee-cf8d-444b-b2c5-0fb4e16c6645" />
+
 
 ## XOR
