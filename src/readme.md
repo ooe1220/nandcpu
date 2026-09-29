@@ -11,3 +11,9 @@
 ## AND
 
 <img width="264" height="77" alt="and drawio (1)" src="https://github.com/user-attachments/assets/934c1999-1d6c-4ac7-bf9b-b95225124146" />
+
+## OR
+
+<img width="314" height="133" alt="or drawio (1)" src="https://github.com/user-attachments/assets/1440f306-e80f-482f-96d7-921e5cfb6b36" />
+
+## XOR
