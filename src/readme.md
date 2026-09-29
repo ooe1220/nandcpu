@@ -26,3 +26,9 @@
 ## 半加算器
 
 <img width="271" height="181" alt="hadder drawio" src="https://github.com/user-attachments/assets/a897f724-676a-4d40-9bb7-534caea93f6b" />
+
+## 全加算器
+
+<img width="655" height="270" alt="faddr" src="https://github.com/user-attachments/assets/757ef6d1-f5ac-4b61-94b6-491cac8c0e1a" />
+
+## 8bit加算器
