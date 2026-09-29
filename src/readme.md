@@ -18,3 +18,5 @@
 
 
 ## XOR
+
+<img width="366" height="136" alt="xor drawio" src="https://github.com/user-attachments/assets/0ded8422-ec84-49c7-b111-08019dc6d335" />
