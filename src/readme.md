@@ -6,7 +6,7 @@
 
 ## NOT
 
-![Uploading not.drawio (3).png…]()
+<img width="180" height="57" alt="not drawio (3)" src="https://github.com/user-attachments/assets/dc86bb39-0424-4e60-b111-948316351e73" />
 
 ## AND
 
