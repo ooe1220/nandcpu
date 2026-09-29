@@ -15,7 +15,7 @@ module tb_adder_8bit;
     );
 
     initial begin
-        $dumpfile("wave.vcd");
+        $dumpfile("out/wave_adder.vcd");
         $dumpvars(0, tb_adder_8bit);
 
         $display("Time |   A   |   B   | Cin |  Sum  | Cout");

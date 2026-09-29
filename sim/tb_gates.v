@@ -14,7 +14,7 @@ module tb_gates;
     xor_gate  u_xor ( .a(a), .b(b), .y(y_xor));
     
     initial begin
-        $dumpfile("wave.vcd"); // 出力する波形
+        $dumpfile("out/wave_gate.vcd"); // 出力する波形
         $dumpvars(0, tb_gates); // 全階層の波形を記録
         
         $display("A B | NAND NOT AND OR XOR");

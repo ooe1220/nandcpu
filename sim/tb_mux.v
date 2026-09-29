@@ -13,7 +13,7 @@ module tb_mux2_1;
     );
 
     initial begin
-        $dumpfile("wave_mux2_1.vcd");
+        $dumpfile("out/wave_mux.vcd");
         $dumpvars(0, tb_mux2_1);
 
         $display("Time | a | b | sel | y");
