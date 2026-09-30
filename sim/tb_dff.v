@@ -1,52 +1,47 @@
 `timescale 1ns/1ps
 
-module tb_dff;
-    reg d;
-    reg clk;
-    wire q;
-    wire q_n;
+module tb_reg8;
+    reg  [7:0] d;
+    reg        clk;
+    wire [7:0] q;
 
-    d_ff uut (
-        .d(d),
-        .clk(clk),
-        .q(q),
-        .q_n(q_n)
-    );
+    reg8 uut (.d(d), .clk(clk), .q(q));
 
-    // クロック生成（周期20ns）
     always #10 clk = ~clk;
 
-    // 波形ダンプ（GTKWaveしたいとき用）
     initial begin
-        $dumpfile("wave.vcd");
-        $dumpvars(0, tb_dff);
-    end
+        $dumpfile("out/wave_tb_reg8.vcd");
+        $dumpvars(0, tb_reg8);
 
-    initial begin
-        $monitor("t=%0t | clk=%b d=%b | q=%b q_n=%b", $time, clk, d, q, q_n);
+        $monitor("t=%0t | clk=%b d=%b | q=%b", $time, clk, d, q);
 
-        // 初期化
         clk = 0;
-        d = 0;
+        d = 8'b00000000;
         #5;
 
-        // clk=0 の間に d を変えてもホールド
-        d = 1;  #5;   // clk=0
-        #10;         // clk=1 に → d=1 を透過 → q=1
+        // パターン1: clk=0 の間に d をセットして、立ち上がりで捕捉
+        d = 8'b01010101;
+        #10;  // clk=0 のまま
+        #10;  // clk=1 立ち上がり → この瞬間の d=01010101 が捕捉される
 
-        // clk=1 の間に d を変える → そのまま追随（ラッチだから）
-        d = 0;  #5;   // q=0 になる
-        d = 1;  #5;   // q=1 になる
+        // パターン2: clk=1 の間に d を変える → q は変わらないはず
+        #5;   // clk=1 のまま
+        d = 8'b10101010;
+        #10;  // clk=1 のまま → q は 01010101 のまま
+        #5;
+        d = 8'b11110000;
+        #10;  // clk=1 のまま → q はまだ 01010101
 
-        // clk=0 に戻す → ホールド
-        #10;         // clk=0
-        d = 0;  #10; // 変えても q は変わらない
-        d = 1;  #10;
+        // パターン3: clk=0 に下がる
+        #10;  // clk=0
+        d = 8'b00001111;
+        #10;  // clk=1 立ち上がり → この瞬間の d=00001111 が捕捉
 
-        // もう一回 clk=1
-        #10;         // clk=1 → d=1 を捕捉
-        d = 0;  #10; // clk=1 のまま → q=0 に追随
+        // パターン4: ホールド確認
+        d = 8'b11111111;
+        #20;  // q は 00001111 のまま
 
+        $display("=== Test Done ===");
         $finish;
     end
 endmodule

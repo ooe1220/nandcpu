@@ -16,3 +16,6 @@ vvp out/tb_muxs.out
 iverilog -o out/diff.out src/gates.v src/dff.v sim/tb_dff.v
 vvp out/diff.out 
 
+# 8bitレジスタ
+iverilog -o out/regester.out sim/tb_regester.v src/regester.v src/dff.v src/gates.v
+vvp out/regester.out 
