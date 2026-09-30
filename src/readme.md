@@ -39,5 +39,10 @@
 
 <img width="369" height="158" alt="dff drawio" src="https://github.com/user-attachments/assets/4f7e9d32-ffcc-42fb-8dc3-bfdf2c44bc67" />
 
+## Dフリップフロップ
+
+<img width="427" height="185" alt="dff drawio (1)" src="https://github.com/user-attachments/assets/9153ab0f-83de-4859-aeee-781f2835108c" />
+
+
 ## 8bitレジスタ
 
