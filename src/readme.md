@@ -32,3 +32,12 @@
 <img width="655" height="270" alt="faddr" src="https://github.com/user-attachments/assets/757ef6d1-f5ac-4b61-94b6-491cac8c0e1a" />
 
 ## 8bit加算器
+
+# dff.v
+
+## Dフリップフロップ
+
+<img width="369" height="158" alt="dff drawio" src="https://github.com/user-attachments/assets/4f7e9d32-ffcc-42fb-8dc3-bfdf2c44bc67" />
+
+
+
