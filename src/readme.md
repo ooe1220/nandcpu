@@ -4,6 +4,15 @@
 
 <img width="266" height="381" alt="nand_cmos drawio" src="https://github.com/user-attachments/assets/39694fb0-6c00-4c8e-a340-3c0a5f36378a" />
 
+| **A** | **B** | **PMOS1** | **PMOS2** | **NMOS1** | **NMOS2** | **y** |
+| :---- | :---- | :-------- | :-------- | :-------- | :-------- | :---- |
+| 0     | 0     | ON        | ON        | OFF       | OFF       | 1     |
+| 0     | 1     | ON        | OFF       | OFF       | ON        | 1     |
+| 1     | 0     | OFF       | ON        | ON        | OFF       | 1     |
+| 1     | 1     | OFF       | OFF       | ON        | ON        | 0     |
+
+※a=1,b=0の場合、NMOS2がOFFとなるため、NMOS側の接地への経路は成立しない。
+
 ## NOT
 
 <img width="180" height="57" alt="not drawio (3)" src="https://github.com/user-attachments/assets/dc86bb39-0424-4e60-b111-948316351e73" />
