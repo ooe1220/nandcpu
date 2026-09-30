@@ -63,3 +63,8 @@
 
 <img width="273" height="247" alt="regester8 drawio" src="https://github.com/user-attachments/assets/3430cf4c-8c8a-4821-94c4-855a426ec545" />
 
+```
+d[7:0] = 11001100
+          ↓ 立ち上がり
+q[7:0] = 11001100
+```
