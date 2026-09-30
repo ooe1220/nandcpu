@@ -39,5 +39,5 @@
 
 <img width="369" height="158" alt="dff drawio" src="https://github.com/user-attachments/assets/4f7e9d32-ffcc-42fb-8dc3-bfdf2c44bc67" />
 
-
+## 8bitレジスタ
 
