@@ -1,0 +1,252 @@
+$date
+	Wed Sep 30 20:41:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 1 ! q_n $end
+$var wire 1 " q $end
+$var reg 1 # clk $end
+$var reg 1 $ clr_n $end
+$var reg 1 % d $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 1 $ clr_n $end
+$var wire 1 % d $end
+$var wire 1 & ng1_out $end
+$var wire 1 ' ng2_out $end
+$var wire 1 ( ng3_out $end
+$var wire 1 ) ng4_out $end
+$var wire 1 " q $end
+$var wire 1 ! q_n $end
+$scope module ng1 $end
+$var wire 1 * GND $end
+$var wire 1 + VDD $end
+$var wire 1 % a $end
+$var wire 1 # b $end
+$var wire 1 , net1 $end
+$var wire 1 & y $end
+$upscope $end
+$scope module ng2 $end
+$var wire 1 - GND $end
+$var wire 1 . VDD $end
+$var wire 1 & a $end
+$var wire 1 # b $end
+$var wire 1 / net1 $end
+$var wire 1 ' y $end
+$upscope $end
+$scope module ng3 $end
+$var wire 1 0 GND $end
+$var wire 1 1 VDD $end
+$var wire 1 & a $end
+$var wire 1 ) b $end
+$var wire 1 2 net1 $end
+$var wire 1 ( y $end
+$upscope $end
+$scope module ng4 $end
+$var wire 1 3 GND $end
+$var wire 1 4 VDD $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 5 net1 $end
+$var wire 1 ) y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x5
+14
+03
+x2
+11
+00
+z/
+1.
+0-
+z,
+1+
+0*
+x)
+x(
+1'
+1&
+0%
+0$
+0#
+x"
+x!
+$end
+#10000
+0,
+1!
+0"
+z5
+0(
+02
+1)
+0'
+0/
+1#
+#15000
+1$
+#20000
+z,
+1'
+z/
+0#
+#30000
+0,
+0'
+0/
+1#
+#40000
+z,
+z/
+0#
+0!
+z2
+0)
+1'
+1"
+05
+1(
+1&
+1%
+#50000
+0&
+0,
+1"
+0!
+05
+1(
+z2
+0)
+1'
+0/
+1#
+#60000
+1&
+z,
+z/
+0#
+#70000
+0&
+0,
+1"
+0!
+05
+1(
+z2
+0)
+1'
+0/
+1#
+#80000
+z,
+z/
+0#
+0"
+1!
+z5
+0(
+02
+1)
+1'
+1&
+0%
+#90000
+0,
+0'
+0/
+1#
+#100000
+z,
+1'
+z/
+0#
+#110000
+0,
+0'
+0/
+1#
+#120000
+z,
+z/
+0#
+0!
+z2
+0)
+1'
+1"
+05
+1(
+1&
+1%
+#130000
+0&
+0,
+1"
+0!
+05
+1(
+z2
+0)
+1'
+0/
+1#
+#140000
+1&
+z,
+z/
+0#
+#150000
+0&
+0,
+1"
+0!
+05
+1(
+z2
+0)
+1'
+0/
+1#
+#160000
+z,
+z/
+0#
+0"
+1!
+z5
+0(
+02
+1)
+1'
+1&
+0%
+#170000
+0,
+0'
+0/
+1#
+#180000
+z,
+1'
+z/
+0#
+#190000
+0,
+0'
+0/
+1#
+#200000
+z,
+1'
+z/
+0#

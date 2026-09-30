@@ -1,24 +1,51 @@
 `timescale 1ns/1ps
 
 module tb_dff;
-    reg set, reset;
-    wire q, q_not;
+    reg d;
+    reg clk;
+    wire q;
+    wire q_n;
 
-    sr_latch uut(.set(set), .reset(reset), .q(q), .q_not(q_not));
+    d_ff uut (
+        .d(d),
+        .clk(clk),
+        .q(q),
+        .q_n(q_n)
+    );
+
+    // クロック生成（周期20ns）
+    always #10 clk = ~clk;
+
+    // 波形ダンプ（GTKWaveしたいとき用）
+    initial begin
+        $dumpfile("wave.vcd");
+        $dumpvars(0, tb_dff);
+    end
 
     initial begin
-        $dumpfile("out/wave_sr_latch.vcd");
-        $dumpvars(0, tb_dff);
+        $monitor("t=%0t | clk=%b d=%b | q=%b q_n=%b", $time, clk, d, q, q_n);
 
-        $display("Time | set | reset | q | q_not");
-        $monitor("%4t |  %b  |   %b   | %b |   %b", $time, set, reset, q, q_not);
+        // 初期化
+        clk = 0;
+        d = 0;
+        #5;
 
-        set = 0; reset = 0; #10;
-        set = 1; reset = 0; #10; ; set
-        set = 0; reset = 0; #10; ; 保持
-        set = 0; reset = 1; #10; ; reset
-        set = 0; reset = 0; #10; ; 保持
-        set = 1; reset = 1; #10; ; 禁止
+        // clk=0 の間に d を変えてもホールド
+        d = 1;  #5;   // clk=0
+        #10;         // clk=1 に → d=1 を透過 → q=1
+
+        // clk=1 の間に d を変える → そのまま追随（ラッチだから）
+        d = 0;  #5;   // q=0 になる
+        d = 1;  #5;   // q=1 になる
+
+        // clk=0 に戻す → ホールド
+        #10;         // clk=0
+        d = 0;  #10; // 変えても q は変わらない
+        d = 1;  #10;
+
+        // もう一回 clk=1
+        #10;         // clk=1 → d=1 を捕捉
+        d = 0;  #10; // clk=1 のまま → q=0 に追随
 
         $finish;
     end

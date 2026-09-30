@@ -1,19 +1,19 @@
 `timescale 1ns/1ps
 
-// ========================================
-// SRラッチ
-// ========================================
-module sr_latch(
-    input set,    // 1でセット
-    input reset,  // 1でリセット
+module d_ff (
+    input  d,
+    input  clk,
     output q,
-    output q_not
+    output q_n
 );
-    wire set_inv, reset_inv;
-    
-    not_gate inv1(set, set_inv);
-    not_gate inv2(reset, reset_inv);
-    
-    nand_gate g1(set_inv, q_not, q);
-    nand_gate g2(reset_inv, q, q_not);
+    wire d_n;
+    wire nand1_out;
+    wire nand2_out;
+
+    not_gate inv (.a(d), .y(d_n));
+    nand_gate nand1 (.a(d),   .b(clk), .y(nand1_out));
+    nand_gate nand2 (.a(d_n), .b(clk), .y(nand2_out));
+    nand_gate nand3 (.a(nand1_out), .b(q_n), .y(q));
+    nand_gate nand4 (.a(nand2_out), .b(q),   .y(q_n));
+
 endmodule
