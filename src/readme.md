@@ -37,11 +37,12 @@
 
 ## Dラッチ
 
-<img width="369" height="158" alt="dff drawio" src="https://github.com/user-attachments/assets/4f7e9d32-ffcc-42fb-8dc3-bfdf2c44bc67" />
+<img width="369" height="151" alt="dlach drawio" src="https://github.com/user-attachments/assets/3cbbbcc2-68ab-4a18-993e-ebf60245a827" />
 
 ## Dフリップフロップ
 
-<img width="427" height="185" alt="dff drawio (1)" src="https://github.com/user-attachments/assets/9153ab0f-83de-4859-aeee-781f2835108c" />
+<img width="427" height="185" alt="dff drawio" src="https://github.com/user-attachments/assets/820c8457-b6d6-43ab-9cf9-30daf4368cb1" />
+
 
 
 ## 8bitレジスタ
