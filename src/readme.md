@@ -52,6 +52,12 @@
 
 <img width="427" height="185" alt="dff drawio" src="https://github.com/user-attachments/assets/820c8457-b6d6-43ab-9cf9-30daf4368cb1" />
 
+| clk     | d   | q          |
+| ------- | --- | ---------- |
+| 0       | 0/1 | 保持         |
+| 1       | 0/1 | **保持**     |
+
+
 ## 8bitレジスタ
 
 <img width="273" height="247" alt="regester8 drawio" src="https://github.com/user-attachments/assets/3430cf4c-8c8a-4821-94c4-855a426ec545" />
