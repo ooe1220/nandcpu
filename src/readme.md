@@ -50,7 +50,7 @@
 
 ## Dフリップフロップ
 
-<img width="427" height="185" alt="dff drawio" src="https://github.com/user-attachments/assets/820c8457-b6d6-43ab-9cf9-30daf4368cb1" />
+<img width="427" height="185" alt="dff drawio (1)" src="https://github.com/user-attachments/assets/0e6f2124-a1a2-498e-ba40-815b645ef21b" />
 
 | clk     | d   | q          |
 | ------- | --- | ---------- |
