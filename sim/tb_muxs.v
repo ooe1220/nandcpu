@@ -1,37 +1,52 @@
 `timescale 1ns/1ps
 
-module tb_mux2_1;
-    reg  a, b;
-    reg  sel;
-    wire y;
+module tb_mux8;
 
-    mux2_1 uut (
-        .a(a),
-        .b(b),
+    reg  [7:0] A;
+    reg  [7:0] B;
+    reg        sel;
+    wire [7:0] Y;
+
+    mux8 uut (
+        .A(A),
+        .B(B),
         .sel(sel),
-        .y(y)
+        .Y(Y)
     );
 
     initial begin
-        $dumpfile("out/wave_mux.vcd");
-        $dumpvars(0, tb_mux2_1);
+        $dumpfile("mux8.vcd");
+        $dumpvars(0, tb_mux8);
 
-        $display("Time | a | b | sel | y");
-        $monitor("%4t | %b | %b |  %b  | %b",
-                  $time, a, b, sel, y);
+        // 最初に一度だけ設定
+        $monitor("time=%0t sel=%b A=%b B=%b Y=%b",
+                 $time, sel, A, B, Y);
 
-        // sel=0 → a が出力されるはず
-        a = 1'b0; b = 1'b0; sel = 1'b0; #10;
-        a = 1'b1; b = 1'b0; sel = 1'b0; #10;
-        a = 1'b0; b = 1'b1; sel = 1'b0; #10;
-        a = 1'b1; b = 1'b1; sel = 1'b0; #10;
+        // TEST1
+        A   = 8'b10110010;
+        B   = 8'b01001101;
+        sel = 1'b0;
 
-        // sel=1 → b が出力されるはず
-        a = 1'b0; b = 1'b0; sel = 1'b1; #10;
-        a = 1'b1; b = 1'b0; sel = 1'b1; #10;
-        a = 1'b0; b = 1'b1; sel = 1'b1; #10;
-        a = 1'b1; b = 1'b1; sel = 1'b1; #10;
+        #10;
+
+        // TEST2
+        sel = 1'b1;
+
+        #10;
+
+        // TEST3
+        A   = 8'b11111111;
+        B   = 8'b00000000;
+        sel = 1'b0;
+
+        #10;
+
+        // TEST4
+        sel = 1'b1;
+
+        #10;
 
         $finish;
     end
+
 endmodule

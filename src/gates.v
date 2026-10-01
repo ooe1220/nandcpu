@@ -91,3 +91,31 @@ module xor_gate (
     nand_gate g4(n2, n3, y);
 
 endmodule
+
+
+// ========================================
+// AND 3入力に対応
+// ========================================
+module and3 (
+    input a,
+    input b,
+    input c,
+    output y
+);
+
+    wire ab;
+
+    and_gate g1 (
+        .a(a),
+        .b(b),
+        .y(ab)
+    );
+
+    and_gate g2 (
+        .a(ab),
+        .b(c),
+        .y(y)
+    );
+
+endmodule
+
