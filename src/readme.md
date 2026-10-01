@@ -49,7 +49,7 @@
 <img width="274" height="158" alt="未命名绘图 drawio" src="https://github.com/user-attachments/assets/55f42494-9535-41af-b43a-696607b4e8f6" />
 
 | sel |  出力 y |
-| --- | ------ | ---- |
+| --- | ------ | 
 | 0   |  A    |
 | 1   | B    |
 
