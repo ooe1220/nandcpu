@@ -56,7 +56,7 @@
 
 ## mux8
 
-<img width="273" height="247" alt="mux8 drawio" src="https://github.com/user-attachments/assets/44b05d4a-5f01-4d18-8af9-bb48e33248e2" />
+<img width="273" height="247" alt="MUX8 drawio (1)" src="https://github.com/user-attachments/assets/302389b3-5616-4553-9997-48cb95749841" />
 
 例
 ```
