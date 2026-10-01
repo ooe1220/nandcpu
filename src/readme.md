@@ -56,6 +56,20 @@
 
 ## mux8
 
+<img width="273" height="247" alt="mux8 drawio" src="https://github.com/user-attachments/assets/44b05d4a-5f01-4d18-8af9-bb48e33248e2" />
+
+例
+```
+A   = 8'b10101010
+B   = 8'b11001100
+```
+
+| sel | Y（出力）          |
+| --- | -------------- |
+| 0   | A = `10101010` |
+| 1   | B = `11001100` |
+
+
 # dff.v
 
 ## Dラッチ
